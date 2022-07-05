@@ -94,5 +94,5 @@ workflows:
       - test
       - lint
       - e2e
-        - requires:
+        requires:
             - build
