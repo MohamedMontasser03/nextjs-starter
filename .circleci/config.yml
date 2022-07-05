@@ -79,6 +79,10 @@ jobs:
           paths:
             - node_modules
       - run:
+          name: build
+          command: |
+            yarn build
+      - run:
           name: E2E
           command: |
             yarn e2e:headless
@@ -90,3 +94,5 @@ workflows:
       - test
       - lint
       - e2e
+        - requires:
+            - build
