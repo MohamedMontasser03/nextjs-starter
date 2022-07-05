@@ -64,7 +64,7 @@ jobs:
             yarn lint
   e2e:
     docker:
-      - image: "cypress/base:8"
+      - image: "cypress/base:latest"
     steps:
       - node/install:
           install-yarn: true
