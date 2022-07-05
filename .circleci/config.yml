@@ -66,6 +66,8 @@ jobs:
     docker:
       - image: "cypress/base:latest"
     steps:
+      - node/install:
+          install-yarn: true
       - checkout
       - restore_cache:
           key: v1-deps-{{ checksum "package-lock.json" }}
